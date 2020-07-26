@@ -8,7 +8,7 @@ on:
     tags:
     - 'v*'
   #  branches: 
-  #    - main
+  #    - master
   schedule:
     - cron: '0 */2 * * *'
   watch:
@@ -54,6 +54,6 @@ jobs:
         git add .
         git commit -m "update new refresh_token" -a
     - name: Push changes
-      uses: ad-m/github-push-action@main
+      uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
